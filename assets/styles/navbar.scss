@@ -1,0 +1,19 @@
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-brand {
+    color: var(--light-color) !important;
+    font-family: var(--title-font);
+    font-size: 1.6em;
+}
+
+.nav-item a {
+    color: var(--dark-color) !important;
+    font-size: 1em;
+    font-family: var(--text-font);
+}
+
+.nav-item .white {
+    color: var(--light-color) !important;
+} 
