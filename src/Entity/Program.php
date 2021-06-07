@@ -29,10 +29,14 @@ class Program
     private $category;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Category::class)
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\Column(type="text")
      */
-    private $ManyToOne;
+    private $summary;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $poster;
 
     public function getId(): ?int
     {
@@ -63,14 +67,26 @@ class Program
         return $this;
     }
 
-    public function getManyToOne(): ?Category
+    public function getSummary(): ?string
     {
-        return $this->ManyToOne;
+        return $this->summary;
     }
 
-    public function setManyToOne(?Category $ManyToOne): self
+    public function setSummary(string $summary): self
     {
-        $this->ManyToOne = $ManyToOne;
+        $this->summary = $summary;
+
+        return $this;
+    }
+
+    public function getPoster(): ?string
+    {
+        return $this->poster;
+    }
+
+    public function setPoster(string $poster): self
+    {
+        $this->poster = $poster;
 
         return $this;
     }
